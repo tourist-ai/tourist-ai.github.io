@@ -91,7 +91,7 @@
 
   /**
    * Animation on scroll function and init
-   */
+
   function aosInit() {
     AOS.init({
       duration: 600,
@@ -104,19 +104,19 @@
 
   /**
    * Initiate glightbox
-   */
+
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
 
   /**
    * Initiate Pure Counter
-   */
+
   new PureCounter();
 
   /**
    * Init isotope layout and filters
-   */
+
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
@@ -214,5 +214,41 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+
+    // Aggiungiamo una funzione per la redirezione in base alla combinazione delle città
+  function handleRedirect(event) {
+    event.preventDefault(); // Evitiamo il comportamento di submit del form
+
+    const departureCity = document.getElementById("departure").value;
+    const destinationCity = document.getElementById("destination").value;
+
+    // Costruiamo l'URL dinamicamente
+    let redirectUrl = '';
+
+    // Combinazioni delle città per redirigere
+    if (departureCity === 'Milano' && destinationCity === 'Roma') {
+      //redirectUrl = 'milano-roma-itinerary.html';
+      redirectUrl = 'itinerary.html';
+    } else if (departureCity === 'Roma' && destinationCity === 'Bologna') {
+      //redirectUrl = 'napoli-firenze-itinerary.html';
+      redirectUrl = 'itinerary.html';
+    } else if (departureCity === 'Milano' && destinationCity === 'Bologna') {
+      //redirectUrl = 'torino-bologna-itinerary.html';
+      redirectUrl = 'itinerary.html';
+    } else {
+      //redirectUrl = 'default-itinerary.html'; // URL di default se la combinazione non è prevista
+    }
+
+    // Redirigiamo l'utente alla pagina selezionata
+    window.location.href = redirectUrl;
+  }
+
+
+  // Aggiungiamo l'evento di click sul pulsante "Generate My Itinerary"
+  const generateButton = document.querySelector('.btn.btn-primary');
+  if (generateButton) {
+    generateButton.addEventListener('click', handleRedirect);
+  }
 
 })();
