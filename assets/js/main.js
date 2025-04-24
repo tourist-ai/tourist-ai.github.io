@@ -227,15 +227,25 @@
     let redirectUrl = '';
 
     // Combinazioni delle città per redirigere
-    if (departureCity === 'Milano' && destinationCity === 'Roma') {
+    if (departureCity === 'Milano' && destinationCity === 'Milano') {
       //redirectUrl = 'milano-roma-itinerary.html';
       redirectUrl = 'itinerary.html';
-    } else if (departureCity === 'Roma' && destinationCity === 'Bologna') {
-      //redirectUrl = 'napoli-firenze-itinerary.html';
+    } else if (departureCity === 'Milano' && destinationCity === 'Berlin') {
       redirectUrl = 'itinerary.html';
-    } else if (departureCity === 'Milano' && destinationCity === 'Bologna') {
-      //redirectUrl = 'torino-bologna-itinerary.html';
+    } else if (departureCity === 'Milano' && destinationCity === 'Roma') {
       redirectUrl = 'itinerary.html';
+    } else if (departureCity === 'Roma' && destinationCity === 'Milano') {
+      redirectUrl = 'itinerary.html';      
+    } else if (departureCity === 'Roma' && destinationCity === 'Berlin') {
+      redirectUrl = 'itinerary.html';
+    } else if (departureCity === 'Roma' && destinationCity === 'Roma') {
+      redirectUrl = 'itinerary.html';
+    } else if (departureCity === 'Berlin' && destinationCity === 'Milano') {
+      redirectUrl = 'itinerary.html';      
+    } else if (departureCity === 'Berlin' && destinationCity === 'Roma') {
+      redirectUrl = 'itinerary.html';
+    } else if (departureCity === 'Berlin' && destinationCity === 'Berlin') {
+      redirectUrl = 'itinerary.html';      
     } else {
       //redirectUrl = 'default-itinerary.html'; // URL di default se la combinazione non è prevista
     }
@@ -250,5 +260,22 @@
   if (generateButton) {
     generateButton.addEventListener('click', handleRedirect);
   }
+
+    /**
+   * Funzione per gestire i clic sui pulsanti "Like" e "Comment"
+   */
+  document.querySelectorAll('.btn-light').forEach(button => {
+    button.addEventListener('click', function() {
+      // Se il testo del pulsante è "Like", mostra un messaggio di like
+      if (this.innerText === "Like") {
+        alert("You liked the post!");
+        this.innerText = "Liked";  // Cambia il testo del pulsante a "Liked"
+      } 
+      // Se il testo del pulsante è "Comment", mostra un messaggio di commento
+      else if (this.innerText === "Comment") {
+        alert("Add your comment here!");
+      }
+    });
+  });
 
 })();
