@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il Tuo Itinerario</title>
+  <link href="resources/css/styles.css" rel="stylesheet"> <!-- CSS personalizzati -->
+  <script src="resources/js/scripts.js"></script> <!-- JavaScript personalizzato -->
+</head>
+<body>
+
+  <div class="container py-5">
+    <h1 class="text-center mb-5">Il Tuo Itinerario da <span id="departure-city"></span> a <span id="destination-city"></span></h1>
+    
+    <!-- Riquadri principali -->
+    <div class="row g-4">
+      <!-- Riquadro 1: Post 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Post 1 - Esperienza a <span id="departure-city"></span></h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia...</p>
+            <a href="#" class="btn btn-link">Leggi di più</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Riquadro 2: Post 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Post 2 - Cosa fare a <span id="destination-city"></span></h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia...</p>
+            <a href="#" class="btn btn-link">Leggi di più</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Riquadro 3: Informazioni aggiuntive -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Altri Dettagli</h5>
+            <p class="card-text">Informazioni aggiuntive sull'itinerario o su cosa aspettarsi durante il viaggio...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
