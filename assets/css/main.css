@@ -51,6 +51,11 @@
   --surface-color: #252525;
   --contrast-color: #ffffff;
 }
+/*
+.text-dark-override {
+  color: #333 !important;
+}
+*/
 
 /* Smooth scroll */
 :root {
@@ -2863,4 +2868,89 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+
+/* Stile generale per il riquadro dei post */
+.card-body {
+    padding: 20px;
+    color: #333;
+}
+
+.post {
+    border-bottom: 1px solid #ddd; /* Linea divisoria tra i post */
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.post:last-child {
+    border-bottom: none; /* Rimuove la linea divisoria dall'ultimo post */
+}
+
+/* Header del post (nome e tempo) */
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.post-header strong {
+    font-size: 1.1rem;
+}
+
+.post-time {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Contenuto del post */
+.post-content {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333 !important;
+}
+
+/* Footer del post (like, comment) */
+.post-footer {
+    margin-top: 10px;
+}
+
+.post-footer button {
+    margin-right: 10px;
+}
+
+/* Pulsanti like/commento */
+.btn-light {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+/* Impostare il colore per il contenuto del post */
+.card-body .post-content {
+    color: #333 !important;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Stili per il riquadro della lista */
+.card-body .list-item {
+    margin-bottom: 20px;
+}
+
+.card-body .list-item-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-body .list-item-content {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Impostazione della lista senza numeri o punti */
+.card-body .list-unstyled {
+    padding-left: 0;
+    list-style: none;
 }

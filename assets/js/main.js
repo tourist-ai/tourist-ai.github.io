@@ -91,7 +91,7 @@
 
   /**
    * Animation on scroll function and init
-   */
+
   function aosInit() {
     AOS.init({
       duration: 600,
@@ -104,19 +104,19 @@
 
   /**
    * Initiate glightbox
-   */
+
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
 
   /**
    * Initiate Pure Counter
-   */
+
   new PureCounter();
 
   /**
    * Init isotope layout and filters
-   */
+
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
@@ -214,5 +214,68 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+
+    // Aggiungiamo una funzione per la redirezione in base alla combinazione delle città
+  function handleRedirect(event) {
+    event.preventDefault(); // Evitiamo il comportamento di submit del form
+
+    const departureCity = document.getElementById("departure").value;
+    const destinationCity = document.getElementById("destination").value;
+
+    // Costruiamo l'URL dinamicamente
+    let redirectUrl = '';
+
+    // Combinazioni delle città per redirigere
+    if (departureCity === 'Milano' && destinationCity === 'Milano') {
+      //redirectUrl = 'milano-roma-itinerary.html';
+      redirectUrl = 'itinerary.html';
+    } else if (departureCity === 'Milano' && destinationCity === 'Berlin') {
+      redirectUrl = 'itinerary.html';
+    } else if (departureCity === 'Milano' && destinationCity === 'Roma') {
+      redirectUrl = 'itinerary.html';
+    } else if (departureCity === 'Roma' && destinationCity === 'Milano') {
+      redirectUrl = 'itinerary.html';      
+    } else if (departureCity === 'Roma' && destinationCity === 'Berlin') {
+      redirectUrl = 'itinerary.html';
+    } else if (departureCity === 'Roma' && destinationCity === 'Roma') {
+      redirectUrl = 'itinerary.html';
+    } else if (departureCity === 'Berlin' && destinationCity === 'Milano') {
+      redirectUrl = 'itinerary.html';      
+    } else if (departureCity === 'Berlin' && destinationCity === 'Roma') {
+      redirectUrl = 'itinerary.html';
+    } else if (departureCity === 'Berlin' && destinationCity === 'Berlin') {
+      redirectUrl = 'itinerary.html';      
+    } else {
+      //redirectUrl = 'default-itinerary.html'; // URL di default se la combinazione non è prevista
+    }
+
+    // Redirigiamo l'utente alla pagina selezionata
+    window.location.href = redirectUrl;
+  }
+
+
+  // Aggiungiamo l'evento di click sul pulsante "Generate My Itinerary"
+  const generateButton = document.querySelector('.btn.btn-primary');
+  if (generateButton) {
+    generateButton.addEventListener('click', handleRedirect);
+  }
+
+    /**
+   * Funzione per gestire i clic sui pulsanti "Like" e "Comment"
+   */
+  document.querySelectorAll('.btn-light').forEach(button => {
+    button.addEventListener('click', function() {
+      // Se il testo del pulsante è "Like", mostra un messaggio di like
+      if (this.innerText === "Like") {
+        alert("You liked the post!");
+        this.innerText = "Liked";  // Cambia il testo del pulsante a "Liked"
+      } 
+      // Se il testo del pulsante è "Comment", mostra un messaggio di commento
+      else if (this.innerText === "Comment") {
+        alert("Add your comment here!");
+      }
+    });
+  });
 
 })();
