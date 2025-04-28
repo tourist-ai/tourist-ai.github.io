@@ -2956,12 +2956,16 @@ section,
 }
 
 
-/* Avatar Container - Specifico per evitare conflitto con Hero */
+/*--------------------------------------------------------------
+# Avatar Section (specifico per i post)
+--------------------------------------------------------------*/
+/* Avatar Container */
 .post .avatar-container {
     margin-right: 10px; /* Spazio tra avatar e nome */
-    width: 40px; /* Imposta la larghezza del contenitore dell'avatar */
-    height: 40px; /* Imposta l'altezza del contenitore dell'avatar */
+    width: 50px; /* Imposta la larghezza del contenitore dell'avatar */
+    height: 50px; /* Imposta l'altezza del contenitore dell'avatar */
     overflow: hidden; /* Nasconde le parti in eccesso */
+    position: relative; /* Assicurati che non venga influenzato da altre regole */
 }
 
 /* Avatar con dimensione ridotta */
@@ -2972,7 +2976,7 @@ section,
     object-fit: cover; /* Assicura che l'immagine si adatti senza distorsioni */
 }
 
-/* Impostazioni generali per il post */
+/* Avatar di dimensioni fisse per evitare conflitti con hero */
 .post-header {
     display: flex;
     align-items: center; /* Allinea verticalmente avatar e nome */
