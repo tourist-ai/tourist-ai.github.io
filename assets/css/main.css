@@ -2954,3 +2954,19 @@ section,
     padding-left: 0;
     list-style: none;
 }
+
+/* Aggiungi selettore specifico per l'avatar */
+.avatar-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assicurati che l'immagine si adatti senza distorsioni */
+    border-radius: 50%; /* Rende l'immagine circolare */
+}
+
+/* Avatar con dimensione ridotta */
+.avatar {
+    width: 100%; /* L'immagine riempie l'intero contenitore */
+    height: 100%; /* L'immagine riempie l'intero contenitore */
+    border-radius: 50%; /* Rende l'immagine circolare */
+    object-fit: cover; /* Assicura che l'immagine si adatti senza distorsioni */
+}
