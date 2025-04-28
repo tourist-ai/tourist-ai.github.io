@@ -2887,17 +2887,6 @@ section,
     border-bottom: none; /* Rimuove la linea divisoria dall'ultimo post */
 }
 
-/* Header del post (nome e tempo) */
-.post-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.post-header strong {
-    font-size: 1.1rem;
-}
-
 .post-time {
     font-size: 0.9rem;
     color: #666;
