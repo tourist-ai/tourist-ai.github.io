@@ -2955,18 +2955,32 @@ section,
     list-style: none;
 }
 
-/* Aggiungi selettore specifico per l'avatar */
-.avatar-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Assicurati che l'immagine si adatti senza distorsioni */
-    border-radius: 50%; /* Rende l'immagine circolare */
+
+/* Avatar Container - Specifico per evitare conflitto con Hero */
+.post .avatar-container {
+    margin-right: 10px; /* Spazio tra avatar e nome */
+    width: 40px; /* Imposta la larghezza del contenitore dell'avatar */
+    height: 40px; /* Imposta l'altezza del contenitore dell'avatar */
+    overflow: hidden; /* Nasconde le parti in eccesso */
 }
 
 /* Avatar con dimensione ridotta */
-.avatar {
+.post .avatar {
     width: 100%; /* L'immagine riempie l'intero contenitore */
     height: 100%; /* L'immagine riempie l'intero contenitore */
     border-radius: 50%; /* Rende l'immagine circolare */
     object-fit: cover; /* Assicura che l'immagine si adatti senza distorsioni */
+}
+
+/* Impostazioni generali per il post */
+.post-header {
+    display: flex;
+    align-items: center; /* Allinea verticalmente avatar e nome */
+    justify-content: space-between; /* Spazia l'avatar e il tempo */
+}
+
+/* Contenitore dell'avatar e del nome */
+.post-author {
+    display: flex;
+    align-items: center; /* Allinea orizzontalmente l'avatar con il nome */
 }
