@@ -5828,6 +5828,7 @@ section,
 }
 
 
+
 /* Stile generale per il riquadro dei post */
 .card-body {
     padding: 20px;
@@ -5981,17 +5982,84 @@ ul.list-unstyled {
 
 /* Pulsanti like/commento */
 .btn-light {
-    background-color: #7EC8E3; /* Azzurro chiaro */
+    background-color: #7EC8E3; /* Azzurro chiaro */ /*#7EC8E3; #9fc2ff; /* Azzurro chiaro */
     color: white; /* Testo bianco per contrasto */
-    border: 1px solid #ccc;
+    border: 1px solid #9fc2ff; /*#ccc */
+
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    font-weight: 650; /* <-- Grassetto robusto (più di 'bold') */
 }
 
-/* Colore per il tasto confirms
+.btn-light:hover {
+  border-color: ##9fc2ff /*#349ec9; */
+}
+
+/* Colore per il tasto confirms*/
 .btn-confirm{
-  background-color: /* #34B7F1 #F44336;   Rosso per Dislike 
-  color: white;
+  color: black;
   border: 1px solid #ccc;
-}*/
+}
+/* background-color: #ffffff; #34B7F1; /* #F44336;  /* Rosso per Dislike */
+
+.like-combo-button {
+  display: inline-flex;
+  border: 1px solid #9fc2ff;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0;
+  font-weight: 650;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.like-number {
+  background-color: white;
+  color: #333;
+  border-right: 1px solid #7EC8E3;
+  padding: 2.5px 6px;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.like-text {
+    background-color: #7EC8E3; /* Azzurro chiaro */ /*#7EC8E3; #9fc2ff; /* Azzurro chiaro */
+    color: white; /* Testo bianco per contrasto */
+    display: inline-flex;
+    align-items: center;
+    padding: 2.5px 9px;
+    font-size: 12px;
+    font-weight: 650; /* <-- Grassetto robusto (più di 'bold') */
+}
+
+/* Scritta "Local Guide" sotto il nome dell'autore */
+.event-location {
+  display: block;
+  font-size: 1rem;
+  color: #666; /* Colore grigio per il testo */
+  margin-top: 2px; /* Spazio tra il nome e "Local Guide" */
+  font-weight: bold; /* Impostazione del grassetto */
+}
+
+.list-item-footer {
+  margin-top: 8px;
+  font-style: italic;
+  color: #666;
+}
+
+.custom-divider {
+  all: unset;               /* rimuove tutti gli stili ereditati o predefiniti */
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;   /* colore della linea */
+  margin: 10px 0;           /* spazi sopra e sotto */
+}
 
 /* Rimuovi la linea divisoria dall'ultimo elemento
 .list-item:last-child {
