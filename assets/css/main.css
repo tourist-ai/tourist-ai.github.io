@@ -2908,12 +2908,6 @@ section,
     margin-right: 10px;
 }
 
-/* Pulsanti like/commento */
-.btn-light {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-}
-
 /* Impostare il colore per il contenuto del post */
 .card-body .post-content {
     color: #333 !important;
@@ -2943,6 +2937,7 @@ section,
     padding-left: 0;
     list-style: none;
 }
+
 
 
 /*--------------------------------------------------------------
@@ -2977,3 +2972,143 @@ section,
     display: flex;
     align-items: center; /* Allinea orizzontalmente l'avatar con il nome */
 }
+
+/* Stile per il numero di like accanto al tasto Like */
+.post-footer {
+  display: flex;
+  align-items: center; /* Allinea i bottoni e il numero orizzontalmente */
+  margin-top: 10px;
+}
+
+.like-count {
+  margin-right: 10px; /* Distanza tra il numero e il bottone */
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Scritta "Local Guide" sotto il nome dell'autore */
+.local-guide {
+  display: block;
+  font-size: 0.8rem;
+  color: #666; /* Colore grigio per il testo */
+  margin-top: 2px; /* Spazio tra il nome e "Local Guide" */
+  font-weight: bold; /* Impostazione del grassetto */
+}
+
+
+/* Aggiungi una riga divisoria tra gli elementi della lista */
+.list-item {
+  border-bottom: 1px solid #ddd; /* Aggiunge la linea divisoria */
+  padding-bottom: 10px; /* Spazio tra il contenuto e la riga divisoria */
+  margin-bottom: 10px; /* Distanza tra gli elementi della lista */
+}
+
+ul.list-unstyled {
+  margin-top: 30px; /* Puoi anche usare questo se preferisci regolare il margine superiore della lista */
+}
+
+/* Aggiungi un riquadro attorno al titolo */
+.card-title {
+  padding: 10px 15px; /* Aggiunge spazio interno per il titolo */
+  border: 2px solid #ddd; /* Imposta il bordo */
+  border-radius: 5px; /* Rende gli angoli arrotondati */
+  margin-bottom: 20px; /* Aumenta lo spazio tra il titolo e la lista */
+}
+ /* background-color: #f9f9f9;  /* Facoltativo: aggiunge un colore di sfondo per il titolo */
+
+/* Colore per il tasto Like
+.btn-like {
+
+} */
+
+/* Pulsanti like/commento */
+.btn-light {
+    background-color: #7EC8E3; /* Azzurro chiaro */ /*#7EC8E3; #9fc2ff; /* Azzurro chiaro */
+    color: white; /* Testo bianco per contrasto */
+    border: 1px solid #9fc2ff; /*#ccc */
+
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    font-weight: 650; /* <-- Grassetto robusto (più di 'bold') */
+}
+
+.btn-light:hover {
+  border-color: ##9fc2ff /*#349ec9; */
+}
+
+/* Colore per il tasto confirms*/
+.btn-confirm{
+  color: black;
+  border: 1px solid #ccc;
+}
+/* background-color: #ffffff; #34B7F1; /* #F44336;  /* Rosso per Dislike */
+
+.like-combo-button {
+  display: inline-flex;
+  border: 1px solid #9fc2ff;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0;
+  font-weight: 650;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.like-number {
+  background-color: white;
+  color: #333;
+  border-right: 1px solid #7EC8E3;
+  padding: 2.5px 6px;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.like-text {
+    background-color: #7EC8E3; /* Azzurro chiaro */ /*#7EC8E3; #9fc2ff; /* Azzurro chiaro */
+    color: white; /* Testo bianco per contrasto */
+    display: inline-flex;
+    align-items: center;
+    padding: 2.5px 9px;
+    font-size: 12px;
+    font-weight: 650; /* <-- Grassetto robusto (più di 'bold') */
+}
+
+/* Scritta "Local Guide" sotto il nome dell'autore */
+.event-location {
+  display: block;
+  font-size: 1rem;
+  color: #666; /* Colore grigio per il testo */
+  margin-top: 2px; /* Spazio tra il nome e "Local Guide" */
+  font-weight: bold; /* Impostazione del grassetto */
+}
+
+.list-item-footer {
+  margin-top: 8px;
+  font-style: italic;
+  color: #666;
+}
+
+.custom-divider {
+  all: unset;               /* rimuove tutti gli stili ereditati o predefiniti */
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;   /* colore della linea */
+  margin: 10px 0;           /* spazi sopra e sotto */
+}
+
+/* Rimuovi la linea divisoria dall'ultimo elemento
+.list-item:last-child {
+  border-bottom: none;
+} */
+
+/* Aggiungi spazio tra il titolo e la lista 
+.card-title {
+  margin-bottom: 20px; 
+}*/
