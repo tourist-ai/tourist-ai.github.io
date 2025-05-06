@@ -226,6 +226,7 @@
     // Costruiamo l'URL dinamicamente
     let redirectUrl = '';
 
+    /**
     // Combinazioni delle città per redirigere
     if (departureCity === 'Milano' && destinationCity === 'Milano') {
       //redirectUrl = 'milano-roma-itinerary.html';
@@ -249,7 +250,21 @@
     } else {
       //redirectUrl = 'default-itinerary.html'; // URL di default se la combinazione non è prevista
     }
-
+    /** */
+    if (destinationCity === 'Milano') {
+      //redirectUrl = 'milano-roma-itinerary.html';
+      redirectUrl = 'itinerary.html';
+    } else if (destinationCity === 'Roma') {
+      redirectUrl = 'itinerary-rome.html';
+    } else if (destinationCity === 'Firenze') {
+      redirectUrl = 'itinerary-florence.html';
+    } else if (destinationCity === 'Bologna') {
+      redirectUrl = 'itinerary-bologna.html';
+    } else if (destinationCity === 'Torino') {
+      redirectUrl = 'itinerary-turin.html';
+    } else {
+      //redirectUrl = 'default-itinerary.html'; // URL di default se la combinazione non è prevista
+    }           
     // Redirigiamo l'utente alla pagina selezionata
     window.location.href = redirectUrl;
   }
