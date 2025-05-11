@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="is">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>TouristAI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!-- Favicons -->
+  <!-- Favicons -->
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: TouristAI
+  * Template URL: https://bootstrapmade.com/TouristAI-bootstrap-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <h1 class="sitename">TouristAI</h1>
+    </a>
+
+    <!-- Navigation Menu -->
+    <nav id="navmenu" class="navmenu">
+        <ul class="d-flex justify-content-between w-100">
+            <li><a href="index-is.html#hero" class="active">Heim</a></li>
+            <li><a href="index-is.html#about">Um Okkur</a></li>
+            <li><a href="index-is.html#services">Þjónusta</a></li>
+            <li><a href="index-is.html#pricing">Verð</a></li>
+            <li><a href="index-is.html#team">Teymið</a></li>
+            <li><a href="index-is.html#contact">Hafa Samband</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+
+    <!-- Container for Contact Us and Language Switcher -->
+<div class="header-right d-flex align-items-center">
+  <a class="btn-getstarted" href="index-is.html#contact">Hafðu samband</a>
+  <div class="language-switcher ms-3">
+    <select id="language-select" onchange="switchLanguage()" class="form-select">
+      <option value="index.html">Enska</option>
+      <option value="index-it.html">Ítalska</option>
+      <option value="index-es.html">Spænska</option>
+      <option value="index-fr.html">Franska</option>
+      <option value="index-is.html" selected>Íslenska</option>
+      <option value="index-tr.html">Tyrkneska</option>
+      <option value="index-ja.html">Japanska</option>
+    </select>
+  </div>
+</div>
+
+    </div>
+  </div>
+</header>
+
+
+  <main class="main">
+
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+  <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+
+  <div class="container py-5" data-aos="fade-in">
+    <div class="row text-center justify-content-center">
+      <div class="col-lg-10">
+        <h1 class="display-4 fw-bold mb-3">Skipuleggðu minna. Uppgötvaðu meira.</h1>
+        <p class="lead mb-4">Láttu <strong>TouristAI</strong> vera snjall ferðafélagi þinn — hann býr til sérsniðna ferðaáætlun, finnur falda gimsteina og hjálpar þér að sleppa við biðraðir á Ítalíu.</p>
+      </div>
+    </div>
+
+    <!-- Search Form Section -->
+    <div id="search" class="search-section bg-white rounded-4 shadow-lg p-4 mt-4 text-dark">
+      <form>
+        <div class="row gy-4">
+          <div class="col-md-4">
+            <label for="departure" class="form-label fw-semibold">Brottfararborg</label>
+            <select class="form-select form-select-lg" id="departure">
+              <option value="Milano" selected>Mílanó (Núverandi staðsetning)</option>
+              <option value="Torino">Tórínó</option>
+              <option value="Bologna">Bólónía</option>
+              <option value="Firenze">Flórens</option>
+              <option value="Roma">Róm</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="destination" class="form-label fw-semibold">Áfangastaður</label>
+            <select class="form-select form-select-lg" id="destination">
+              <option disabled selected>Veldu áfangastað</option>
+              <option value="Milano">Mílanó</option>
+              <option value="Torino">Tórínó</option>
+              <option value="Bologna">Bólónía</option>
+              <option value="Firenze">Flórens</option>
+              <option value="Roma">Róm</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="travelers" class="form-label fw-semibold">Ferðalangar</label>
+            <select class="form-select form-select-lg" id="travelers">
+              <option value="1">1 ferðalangur</option>
+              <option value="2">2 ferðalangar</option>
+              <option value="3">3 ferðalangar</option>
+              <option value="4">4 ferðalangar</option>
+              <option value="5+">5+ ferðalangar</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="check-in" class="form-label fw-semibold">Innritun</label>
+            <input type="date" class="form-control form-control-lg" id="check-in">
+          </div>
+
+          <div class="col-md-4">
+            <label for="check-out" class="form-label fw-semibold">Útritun</label>
+            <input type="date" class="form-control form-control-lg" id="check-out">
+          </div>
+
+          <div class="col-md-4">
+            <label for="budget" class="form-label fw-semibold">Fjárhagsáætlun</label>
+            <select class="form-select form-select-lg" id="budget">
+              <option value="budget">Ódýrt</option>
+              <option value="moderate">Miðlungs</option>
+              <option value="luxury">Lúxus</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="interests" class="form-label fw-semibold">Áhugasvið</label>
+            <select class="form-select form-select-lg" id="interests">
+              <option value="culture">Menning & Saga</option>
+              <option value="adventure">Ævintýri & Útivera</option>
+              <option value="food">Matur & Matargerð</option>
+              <option value="relaxation">Afslöppun & Vellíðan</option>
+              <option value="nightlife">Næturlíf & Skemmtun</option>
+            </select>
+          </div>
+
+          <div class="col-md-6 d-flex align-items-end">
+            <button type="button" class="btn btn-primary btn-lg w-100 py-3">Búa til mína ferðaáætlun</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- /Hero Section -->
+
+
+    <!-- About Section -->
+<section id="about" class="about section light-background">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row align-items-xl-center gy-5">
+
+      <div class="col-xl-5 content">
+        <h3>Um Okkur</h3>
+        <h2>Sérsníddu ferðir með gervigreind — Einfaldar, snjallar og ekta upplifanir</h2>
+        <p>
+          Hjá <strong>TouristAI</strong> erum við að endurhugsa ferðalög með því að sameina gervigreind og innsýn úr raunheimum. Hvort sem þú ert ævintýragjarn einstaklingur, matgæðingur eða fjölskylda á ferðalagi, þá búum við til ferðir sem virðast sérsniðnar – vegna þess að þær eru það! Með rauntímagögn um biðraðir, staðbundnar leiðsagnir, sérsniðnar ferðaáætlanir og tilkynningar um viðburði gerum við skipulagningu auðvelda og upplifanir ógleymanlegar.
+        </p>
+        <a href="index-is.html#hero" class="read-more"><span>Byrjaðu að Skipuleggja</span><i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="col-xl-7">
+        <div class="row gy-4 icon-boxes">
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon-box">
+              <i class="bi bi-people"></i>
+              <h3>Staðbundnir leiðsögumenn</h3>
+              <p>Hittu staðfesta leiðsögumenn og námsmenn sem tala þitt tungumál og þekkja menninguna.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <i class="bi bi-person-check"></i>
+              <h3>Sérsniðnar upplifanir</h3>
+              <p>AI-mæltar tillögur út frá áhugamálum þínum, fjárhagsáætlun, ferðastíl og staðsetningu.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <i class="bi bi-map"></i>
+              <h3>Snjöll ferðaáætlun</h3>
+              <p>Láttu reikniritin okkar skipuleggja daginn þinn – allt frá vinsælum kennileitum til falinna gimsteina.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box">
+              <i class="bi bi-clock-history"></i>
+              <h3>Rauntímauppfærslur</h3>
+              <p>Fáðu tilkynningar í rauntíma um biðraðir, viðburði, tafir eða nálægar valkostir svo þú missir aldrei af neinu.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- /About Section -->
+
+
+  <!-- Services Section -->
+<section id="services" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Þjónusta</h2>
+    <p>TouristAI færir sérsniðna ferðaplönun beint í hendur þér með AI-undirstuddum tillögum og hnökralausum bókunum.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <!-- Service Item 1: Local Guide Connection -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-person-lines-fill"></i></div>
+          <div>
+            <h4 class="title"><span class="stretched-link">Tenging við staðbundna leiðsögumenn</span></h4>
+            <p class="description">Tengstu staðbundnum leiðsögumönnum til að uppgötva falda gimsteina og upplifa áfangastaðinn eins og heimamaður — fyrir utan hina hefðbundnu ferðamannastaði.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item 2: AI-Driven Personalization -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-robot"></i></div>
+          <div>
+            <h4 class="title"><span class="stretched-link">Sérsniðin upplifun með AI</span></h4>
+            <p class="description">TouristAI býr til einstaklingsmiðaðar ferðaupplifanir byggðar á áhugamálum þínum, fjárhagsáætlun og óskum, með bestu mæltu tillögunum fyrir þig.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item 3: Seamless Booking System -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-calendar-check"></i></div>
+          <div>
+            <h4 class="title"><span class="stretched-link">Hnökralaust bókunarkerfi</span></h4>
+            <p class="description">Bókaðu afþreyingu, veitingastaði og gistingu auðveldlega. Vettvangurinn okkar býður upp á bókanir með einum smelli og samstundis staðfestingu.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item 4: Queue & Alternative Suggestions -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-clock"></i></div>
+          <div>
+            <h4 class="title"><span class="stretched-link">Ráðleggingar um biðraðir og valmöguleika</span></h4>
+            <p class="description">Forðastu langar biðraðir með AI-undirstuddum tímamati og fáðu tillögur að öðrum tíma eða nálægum stöðum fyrir stresslausa upplifun.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item 5: Real-Time Event Discovery -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-calendar-event"></i></div>
+          <div>
+            <h4 class="title"><span class="stretched-link">Uppgötvun viðburða í rauntíma</span></h4>
+            <p class="description">Vertu upplýstur um viðburði í rauntíma með web scraping-kerfinu okkar. Missirðu aldrei af hátíð, tónleikum eða sérstökum viðburði á ferðalagi þínu.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item 6: Rewards & Perks -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-gift"></i></div>
+          <div>
+            <h4 class="title"><span class="stretched-link">Verðlaun og fríðindi</span></h4>
+            <p class="description">Safnaðu einkaréttarverðlaunum og fríðindum með því að deila umsögnum þínum og fáðu afslætti eða forgangsbókanir fyrir næstu ævintýri.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Services Section -->
+
+
+    
+ <!-- Pricing Section -->
+<section id="pricing" class="pricing section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Verð</h2>
+    <p>Veldu áætlun sem hentar þínum ferðalögum og opnaðu fyrir sérsniðnar upplifanir með staðbundnum leiðsögumönnum.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="zoom-in" data-aos-delay="100">
+
+    <div class="row g-4">
+
+      <div class="col-lg-4">
+        <div class="pricing-item">
+          <h3>Grunnáætlun</h3>
+          <div class="icon">
+            <i class="bi bi-person-check"></i>
+          </div>
+          <h4><sup>€</sup>0<span> / mánuði</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>Aðgangur að takmörkuðum leiðsögumönnum</span></li>
+            <li><i class="bi bi-check"></i> <span>Kanna vinsælustu ferðamannastaðina</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span>Sérsniðnir ferðaáætlanir</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span>Rauntímauppfærslur um viðburði</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span>Takmarkaður þjónustuaðgangur</span></li>
+          </ul>
+          <div class="text-center"><a href="index-is.html#contact" class="buy-btn">Byrjaðu núna</a></div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+      <div class="col-lg-4">
+        <div class="pricing-item featured">
+          <h3>Premium-áætlun</h3>
+          <div class="icon">
+            <i class="bi bi-star"></i>
+          </div>
+
+          <h4><sup>€</sup>4.99<span> / mánuði</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>Ótakmarkaður aðgangur að leiðsögumönnum</span></li>
+            <li><i class="bi bi-check"></i> <span>Sérsniðnar ferðaáætlanir miðað við óskir</span></li>
+            <li><i class="bi bi-check"></i> <span>Rauntímauppfærslur um viðburði</span></li>
+            <li><i class="bi bi-check"></i> <span>Forgangsþjónusta við viðskiptavini</span></li>
+            <li><i class="bi bi-check"></i> <span>Aðgangur að einstökum staðbundnum leiðsögumönnum</span></li>
+          </ul>
+          <div class="text-center"><a href="index-is.html#contact" class="buy-btn">Byrjaðu núna</a></div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+      <div class="col-lg-4">
+        <div class="pricing-item">
+          <h3>Fyrirtækjaáætlun</h3>
+          <div class="icon">
+            <i class="bi bi-building"></i>
+          </div>
+          <h4><sup>€</sup>49<span> / mánuði</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>Sérsniðnar ferðaáætlanir fyrir fyrirtæki</span></li>
+            <li><i class="bi bi-check"></i> <span>Persónulegur ferðaráðgjafi</span></li>
+            <li><i class="bi bi-check"></i> <span>Rauntíma innsýn og tillögur</span></li>
+            <li><i class="bi bi-check"></i> <span>Útvaldar staðbundnar samstarfsáætlanir</span></li>
+            <li><i class="bi bi-check"></i> <span>Fullur aðgangur að öllum Premium eiginleikum</span></li>
+          </ul>
+          <div class="text-center"><a href="index-is.html#contact" class="buy-btn">Byrjaðu núna</a></div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Pricing Section -->
+
+
+   <!-- Faq Section -->
+<section id="faq" class="faq section">
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="content px-xl-5">
+          <h3><span>Algengar </span><strong>Spurningar</strong></h3>
+          <p>Fáðu skjót svör við algengustu spurningunum um áætlanir okkar og eiginleika.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="faq-container">
+          <div class="faq-item faq-active">
+            <h3><span class="num">1.</span> <span>Hver er munurinn á Free, Premium og Enterprise áætlunum?</span></h3>
+            <div class="faq-content">
+              <p>Free áætlunin veitir aðgang að grunnleiðsögum fyrir vinsæla áfangastaði, Premium áætlunin veitir ótakmarkaðan aðgang að sérsniðnum ferðaáætlunum og rauntímauppfærslum. Enterprise áætlunin býður upp á sérsniðnar lausnir fyrir fyrirtæki og tíð ferðalög, ásamt sértækum stuðningi og staðbundnum samstarfum.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">2.</span> <span>Get ég uppfært áætlunina mína síðar?</span></h3>
+            <div class="faq-content">
+              <p>Já, þú getur auðveldlega uppfært áætlunina þína hvenær sem er í gegnum stillingar reikningsins. Þú færð tafarlausan aðgang að nýjum eiginleikum og ávinningi eftir uppfærsluna.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">3.</span> <span>Hvaða tegund stuðnings fylgir hverri áætlun?</span></h3>
+            <div class="faq-content">
+              <p>Free notendur fá grunnstuðning á skrifstofutíma. Premium notendur fá forgangsþjónustu með skjótari svörun, og Enterprise notendur fá sértækan stuðning allan sólarhringinn fyrir allar ferðalagatengdar þarfir.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">4.</span> <span>Er hægt að sérsníða ferðaáætlanirnar að fullu?</span></h3>
+            <div class="faq-content">
+              <p>Já! Bæði Premium og Enterprise áætlanir bjóða upp á fullkomlega sérsniðnar ferðaáætlanir. Þú getur valið sérstakar athafnir, áfangastaði og beðið um einstaka upplifanir sem henta þér.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">5.</span> <span>Hvernig virka rauntímauppfærslurnar um viðburði?</span></h3>
+            <div class="faq-content">
+              <p>Við notum gervigreind til að safna rauntímaupplýsingum um viðburði, þar með talið tímabreytingar, veðurskilyrði og staðbundnar athafnir. Þetta tryggir að þú hafir alltaf nýjustu upplýsingarnar þegar þú skipuleggur ferðina þína.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">6.</span> <span>Get ég hætt áskriftinni hvenær sem er?</span></h3>
+            <div class="faq-content">
+              <p>Já, þú getur sagt upp áskriftinni hvenær sem er í gegnum stillingar reikningsins. Þjónustan verður virk fram að lokum núverandi greiðslutímabils og þú færð ekki frekari gjöld eftir afskráningu.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">7.</span> <span>Hvað ef ég þarf hjálp við að skipuleggja ferð eða áfangastað?</span></h3>
+            <div class="faq-content">
+              <p>Premium og Enterprise notendur hafa aðgang að sérfræðingum í ferðaráðgjöf sem geta aðstoðað við skipulagningu, svarað spurningum um ákveðna staði og veitt tillögur um sérsniðnar upplifanir sem henta þínum áhugamálum.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /Faq Section -->
+
+
+   <!-- Team Section -->
+<section id="team" class="team section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Teymið Okkar</h2>
+    <p>Fjölþjóðlegt teymi verkfræðinga sem mótar næstu kynslóð ferðaupplifana.</p>
+  </div>
+
+  <div class="container">
+    <div class="row gy-5">
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+        <div class="member-img">
+          <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="member-info text-center">
+          <h4>Matteo Pavia</h4>
+          <span>Framkvæmdastjóri</span>
+            <p>Ítalía – Meistari í vélmennafræði</p>
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+        <div class="member-img">
+          <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="member-info text-center">
+          <h4>Daffer Queque</h4>
+          <span>Tæknistjóri</span>
+            <p>Perú – Doktorsgráða í gervigreind</p>
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
+        <div class="member-img">
+          <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="member-info text-center">
+          <h4>Kristin Eva</h4>
+          <span>Markaðsstjóri</span>
+            <p>Ísland – Meistara í hugbúnaðargerð</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
+        <div class="member-img">
+          <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="member-info text-center">
+          <h4>Alessandro Mantovani</h4>
+          <span>Sölustjóri</span>
+            <p>Ísland – BSc í sjálfvirkniverkfræði</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
+        <div class="member-img">
+          <img src="assets/img/team/team-5.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="member-info text-center">
+          <h4>Helin Geleri</h4>
+         <span>Ürün Direktörü</span>
+            <p>Türkiye – Yüksek Lisans in Otomasyon Mühendisliği</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
+        <div class="member-img">
+          <img src="assets/img/team/team-6.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="member-info text-center">
+          <h4>Mateo Gomez</h4>
+          <span>Chief Financial Officer</span>
+            <p>Kolombiya – Finansal Mühendislik Yüksek Lisansı</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="700">
+        <div class="member-img">
+          <img src="assets/img/team/team-7.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="member-info text-center">
+          <h4>Fabio Ficcadenti</h4>
+          <span>Chief Development Officer</span>
+            <p>İtalya – Veri Bilimi Yüksek Lisansı</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Testimoniler Bölümü -->
+<section id="testimonials" class="testimonials section light-background">
+
+  <div class="container">
+
+    <div class="row align-items-center">
+
+      <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
+        <h3>Kullanıcılarımız Ne Diyor?</h3>
+        <p>
+          İlk kullanıcılarımızın geri bildirimleri, TouristAI'yi şekillendirmede önemli bir rol oynadı. İşte gezginlerin, geliştiricilerin ve yerel hizmet sağlayıcıların deneyimlerine dair söyledikleri.
+        </p>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="d-flex">
+                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img flex-shrink-0" alt="">
+                  <div>
+                    <h3>Ana Ribeiro</h3>
+                    <h4>Seyahat Blog Yazarı, Portekiz</h4>
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>TouristAI, kendi başıma asla bulamayacağım gizli güzellikleri keşfetmeme yardımcı oldu. Sanki cebimde bir yerel rehberim vardı.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="d-flex">
+                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img flex-shrink-0" alt="">
+                  <div>
+                    <h3>Daniel Kim</h3>
+                    <h4>Startup Kurucusu, Seul</h4>
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>GAAS API'sini, uygulamamızda gerçek zamanlı güzergahlar sunmak için entegre ettik. Çok sorunsuz, hızlı ve ölçeklenebilir oldu.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="d-flex">
+                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img flex-shrink-0" alt="">
+                  <div>
+                    <h3>Marie Chen</h3>
+                    <h4>Şehir Rehberi Operatörü, Vancouver</h4>
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>TouristAI platformu, benim gibi yerel hizmet sağlayıcılarının uluslararası gezginler tarafından keşfedilmesine yardımcı oluyor. Bu büyük bir değişim!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Testimoniler Bölümü -->
+
+
+    <!-- İletişim Bölümü -->
+<section id="contact" class="contact section">
+
+  <!-- Bölüm Başlığı -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>İletişim</h2>
+    <p>TouristAI hakkında özelleştirilmiş seyahat yardımı ve bilgi almak için bizimle iletişime geçin</p>
+  </div><!-- /Bölüm Başlığı -->
+
+  <div class="responsive-form">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfMyvD1u5DJjxACIkxui8BlZ7xAwbm93mVJPD7hQkZAxZcYMg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Yükleniyor…</iframe>
+  </div>
+
+</section><!-- /İletişim Bölümü -->
+
+</main>
+
+<footer id="footer" class="footer position-relative light-background">
+
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <div class="col-lg-5 col-md-12 footer-about">
+        <a href="index-is.html" class="logo d-flex align-items-center">
+          <span class="sitename">TouristAI</span>
+          <small class="text-muted ms-2">Üniversite Projesi</small>
+        </a>
+
+        <p class="mt-3">
+          <strong>TouristAI</strong>, üniversite öğrencileri tarafından geliştirilen ve dijital yenilik ve teknoloji girişimciliği üzerine bir akademik ders kapsamında oluşturulan kar amacı gütmeyen bir projedir.
+        </p>
+
+        <p>
+          Bu web sitesi yalnızca eğitim ve araştırma amaçları için tasarlanmıştır. Sunulan işlevler, içerikler ve hizmetler prototip niteliğindedir ve ticari bir teklif sunmamaktadır. Ücretli hizmetler veya seyahat rezervasyonları yapılmamaktadır.
+        </p>
+
+        <p>
+          Gösterilen tüm veriler hayali olup, akademik sunumlar için adil kullanım ilkelerine göre kullanılmaktadır. TouristAI, yapay zekanın kişiselleştirilmiş seyahat deneyimlerini nasıl geliştirebileceğini keşfetmek için bir kavram kanıtıdır.
+        </p>
+      </div>
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Faydalı Linkler</h4>
+        <ul>
+          <li><a href="index-is.html#hero">Anasayfa</a></li>
+          <li><a href="index-is.html#about">Hakkımızda</a></li>
+          <li><a href="index-is.html#services">Hizmetler</a></li>
+          <li><a href="index-is.html#pricing">Fiyatlandırma</a></li>
+          <li><a href="index-is.html#team">Takım</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Hizmetlerimiz</h4>
+        <ul>
+          <li><a href="#">Yerel Rehberler</a></li>
+          <li><a href="#">Özelleştirilmiş Güzergahlar</a></li>
+          <li><a href="#">Yapay Zeka Seyahat Asistanı</a></li>
+          <li><a href="#">Gerçek Zamanlı Güncellemeler</a></li>
+          <li><a href="#">Kültürel Tavsiyeler</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4>Yasal Uyarı</h4>
+        <p>
+          Bu proje, Milano Politeknik Üniversitesi'nde verilen Yüksek Teknoloji Girişimciliği dersinde öğrenciler tarafından gerçekleştirilmiştir ve akademik değerlendirme amacıyla yapılmıştır. Seyahat acenteleri veya dış kurumlarla herhangi bir bağlantısı yoktur.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>
+      © 2025 <strong class="sitename">TouristAI</strong> — Eğitim ve araştırma amacıyla üniversite öğrencileri tarafından yaratılmış bir akademik projedir. Ticari haklar dahil değildir.
+    </p>
+
+   <div class="credits">
+       <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+  </div>
+
+</footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+<!-- Begin TouristAI Content -->
+<!-- The full HTML provided by the user goes here -->
+<!-- For brevity, it is assumed to be pasted here -->
+<!-- End TouristAI Content -->
+
+<script>
+  function switchLanguage() {
+    const selectedLang = document.getElementById("language-select").value;
+    window.location.href = selectedLang;
+  }
+</script>
+
+</body>
+
+</html>
