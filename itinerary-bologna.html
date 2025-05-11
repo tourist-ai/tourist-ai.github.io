@@ -78,141 +78,28 @@
         <h1 class="text-center mb-5">Itinerary & updates </h1>
 
         <div class="container py-5">
-          <!-- Card orizzontale sopra -->
-          <div class="row mb-4">
-            <div class="col-12">
-              <!--<div class="card horizontal-card shadow-sm">-->
-                <!--<h4 class="card-title" style="padding:0; margin:0;"><strong>Itinerary</strong></h4>-->   
-                <div class="card-body d-flex align-items-center"  style="padding:0;margin-top:0;">
-                  <!--<div class="itinerary-content" style="margin-top:0;">-->
-                    <!--<h5 class="card-title mb-1">✨<strong>Travel plan Itinerary</strong></h5>-->
-                    <div class="container my-4 itinerary-container">
-                      <div class="d-flex align-items-center justify-content-center mb-4">
-                        <!--<img src="assets\img\Bologna.jpeg" alt="Icon" class="me-3" style="margin-left:60px; width: 120px; height: 120px;">-->
-                        <h3 class="mb-0">🗓️ 3-Day Itinerary in Bologna</h3>
-                      </div>
-                      <div class="row w-100 mx-0">
-
-                        <!-- Colonna 1 -->
-                        <div class="col-md-5">
-                          <h4>📍 Day 1: Historic Center & Landmarks</h4>
-                          <ul>
-                            <li><strong>Morning:</strong> Visit Piazza Maggiore and Basilica di San Petronio.</li>
-                            <li><strong>Midday:</strong> Climb the Asinelli Tower for a panoramic view.</li>
-                            <li><strong>Lunch:</strong> Try tagliatelle al ragù in a traditional trattoria.</li>
-                            <li><strong>Afternoon:</strong> Explore the Archiginnasio and its historic library.</li>
-                            <li><strong>Evening:</strong> European Market (selected events #1)</li>
-                            <li><strong>Night:</strong> Drink in Via del Pratello.</li>
-                          </ul>
-                    
-                          <h4>📍 Day 2: Culture & Food</h4>
-                          <ul>
-                            <li><strong>Morning:</strong> Visit the Museo di Palazzo Poggi and university area.</li>
-                            <li><strong>Midday:</strong> Stroll under Bologna's famous porticoes.</li>
-                            <li><strong>Lunch:</strong> Eat tortellini in brodo at Osteria dell'Orsa.</li>
-                            <li><strong>Afternoon:</strong> Visit the Pinacoteca Nazionale.</li>
-                            <li><strong>Evening:</strong> Sick Tamburo concert (selected events #2)</li>
-                          </ul>
-                        </div>
-                    
-                        <!-- Colonna 2 -->
-                        <div class="col-md-5">
-                          <h4>📍 Day 3: Surroundings & Relax</h4>
-                          <ul>
-                            <li><strong>Morning:</strong> Take a walk to the Sanctuary of San Luca.</li>
-                            <li><strong>Lunch:</strong> Picnic with local products at Giardini Margherita.</li>
-                            <li><strong>Afternoon:</strong> Relax at a café and try some gelato.</li>
-                            <li><strong>Evening:</strong> Farewell dinner with views from a rooftop restaurant.</li>
-                          </ul>
-                    
-                          <!-- Spazio per altre attività extra  -->
-                          <h4>🧭 Optional Activities</h4>
-                          <ul>
-                            <li>Visit FICO Eataly World.</li>
-                            <li>Take a pasta-making class.</li>
-                            <!--<li>Quick train trip to Modena or Parma.</li>-->
-                          </ul>
-                          <!--  Real-time updates -->
-                          <h4>🕒 Real-time updates</h4>
-                          <ul>
-                            <li>Only for today: AI exhibition in Palazzo Re Enzo</li>
-                            <li>Do not take Viale Indipendenza by car</li>
-                            <li>Cool situation in Giardini Margherita</li>
-                          </ul>                          
-                        </div>
-
-                        <!-- Colonna immagini verticali  -->
-                        <div class="col-md-2">
-                          <div class="image-column">
-                            <img src="assets/img/Bologna.jpeg" class="img-fluid mb-3" alt="Bologna 1">
-                            <img src="assets/img/Bolo2.jpeg" class="img-fluid mb-3" alt="Bologna 2">
-                            <img src="assets/img/Bolo3.jpeg" class="img-fluid mb-3" alt="Bologna 3">
-                            <img src="assets/img/Bolo4.jpeg" class="img-fluid mb-3" alt="Bologna 4">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  <!--</div>-->
-                </div>
-              <!--</div>-->
-            </div>
-          </div>
-
           <!-- Riquadri principali -->
           <div class="card shadow-sm mb-4" style="background-color: #f3f7ff;; padding:10px;">  
-            <h4 class="card-title"><strong>Social section: stay updated</strong></h4>      
+            <h4 class="card-title"><strong>Itinerary & Social live updates</strong></h4>      
             <div class="row g-4">
-              <!-- Riquadro 1: real time events map -->
+              <!-- Riquadro 1: Chatbot -->
               <div class="col-md-4">
                 <div class="card h-100 shadow-sm">
                   <div class="card scrollable-card">
                     <div class="card-body">
-                      <h5 class="card-title"><strong>Real-time events map</strong><span id="departure-city"></span></h5>
-                      <div class="image-column">
-                      <img src="assets\img\events-map_blue.jpg" class="img-fluid mb-3" alt="events-map">
-                      </div>
+                      <h5 class="card-title"><strong>Itinerary Chatbot</strong><span id="departure-city"></span></h5>
+                      <iframe
+                        src="https://daffer-queque-tourist-ai-chatbot.hf.space"
+                        style="width:100%;height:700px;border:none;"
+                        loading="lazy">
+                      </iframe>
                       <!--<a href="#" class="btn btn-link">Leggi di più</a> -->
-                      <!-- Post 1 -->
-                      <div class="post">
-                        <span class="card-subtitle text-muted mb-2" style="font-size: 1rem;"><strong>Place selected: Locomotive club<br> <br></strong></span>
-                        <div class="post-header">
-                          <!-- Avatar e nome dell'autore -->
-                          <div class="post-author">
-                            <div class="avatar-container">
-                              <img src="assets/img/team/team-1.jpg" alt="Jon Doe" class="avatar">
-                            </div>
-                            <div>
-                              <strong>Marco Poli</strong>
-                              <span class="local-guide">Citizen</span> <!-- Scritta "Local Guide" -->
-                            </div>
-                          </div>
-                          <span class="post-time">1d ago</span>
-                        </div>
-                        <p class="post-content">Locomotive club concert SOLD OUT</p>
-                        <div class="post-footer">
-                        
-                        <button class="like-combo-button">
-                          <span class="like-number">12</span>
-                          <span class="like-text">Like</span>
-                        </button>
-                        </div>
-                      </div>                      
                     </div>
                   </div>
                 </div>
               </div>
-        
-              <!-- Riquadro 2: Post 2 
-              <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                  <div class="card-body">
-                    <h5 class="card-title"> Live updates from travelers <span id="destination-city"></span></h5>
-                    <p class="card-text">Live updates <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia...</p>
-                  </div>
-                </div>
-              </div>-->
-
-              <!-- Riquadro 2: Post 2 -->
+              
+              <!-- Riquadro 2: Live updates -->
               <div class="col-md-4">
                 <div class="card h-100 shadow-sm">
                   <div class="card scrollable-card">
@@ -317,10 +204,84 @@
                   </div>
                 </div>
               </div>
-        
 
-              <!-- Riquadro 2: Lista -->
+              <!-- Riquadro 3: real time events map -->
               <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                  <div class="card scrollable-card">
+                    <div class="card-body">
+                      <h5 class="card-title"><strong>Real-time events map</strong><span id="departure-city"></span></h5>
+                      <div class="image-column">
+                      <img src="assets\img\events-map_blue.jpg" class="img-fluid mb-3" alt="events-map">
+                      </div>
+                      <!--<a href="#" class="btn btn-link">Leggi di più</a> -->
+                      <!-- Post 1 -->
+                      <div class="post">
+                        <span class="card-subtitle text-muted mb-2" style="font-size: 1rem;"><strong>Place selected: Locomotive club<br> <br></strong></span>
+                        <div class="post-header">
+                          <!-- Avatar e nome dell'autore -->
+                          <div class="post-author">
+                            <div class="avatar-container">
+                              <img src="assets/img/team/team-1.jpg" alt="Jon Doe" class="avatar">
+                            </div>
+                            <div>
+                              <strong>Marco Poli</strong>
+                              <span class="local-guide">Citizen</span> <!-- Scritta "Local Guide" -->
+                            </div>
+                          </div>
+                          <span class="post-time">1d ago</span>
+                        </div>
+                        <p class="post-content">Locomotive club concert SOLD OUT</p>
+                        <div class="post-footer">
+                        
+                        <button class="like-combo-button">
+                          <span class="like-number">12</span>
+                          <span class="like-text">Like</span>
+                        </button>
+                        </div>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!--close second row-->
+
+          <div class="card shadow-sm my-4" style="height: 150px;">
+            <div class="card-body d-flex justify-content-between align-items-center h-100">
+              <h5 class="card-title mb-1">Suggested Local Guide </h5>
+                      <div class="post">                        
+                        <div class="post-header">
+                          <!-- Avatar e nome dell'autore -->                          
+                          <div class="post-author">
+                            <div class="avatar-container">
+                              <img src="assets/img/team/team-1.jpg" alt="Jon Doe" class="avatar">
+                            </div>
+                            <div>
+                              <strong>Jon Doe</strong>
+                              <span class="local-guide">Local Guide</span> <!-- Scritta "Local Guide" -->
+                            </div>
+                          </div>
+                        </div>
+                        <p class="post-content">With 10 yrs of experience, he knows everything about Bologna<br>English, Italian and Spanish</p>
+                      </div>
+              <!-- Contenuto a sinistra 
+              <div>
+                <h5 class="card-title mb-1">Suggested Local Guide for your travel</h5>
+                <p class="post-content">Contattaci per maggiori informazioni o supporto personalizzato.</p>
+              </div>-->
+
+              <!-- Bottone a destra -->
+              <div>
+                <a href="#contatti" class="btn btn-primary">Request guide</a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Riquadro finale: Eventi Lista -->
+          <div class="row mb-4">
+            <div class="col-12">
                 <div class="card h-100 shadow-sm">
                   <div class="card scrollable-card">
                     <div class="card-body">
@@ -362,33 +323,6 @@
                 </div>
               </div>
             </div>
-          </div><!--close second row-->
-
-          <!-- Card orizzontale sotto - chatbot -->
-          <div class="row mb-4">
-            <div class="col-12">
-              <!--<div class="card horizontal-card shadow-sm" style="margin-top: 20px;">-->
-                <div class="card-body d-flex align-items-center">
-                  <div class="itinerary-content">
-                    <!--<h5 class="card-title mb-1">✨<strong>Travel plan Itinerary</strong></h5>-->
-                    <div class="container my-4 itinerary-container">
-                      <div class="d-flex align-items-center justify-content-center mb-4">
-                        <!--<img src="assets\img\Bologna.jpeg" alt="Icon" class="me-3" style="margin-left:60px; width: 120px; height: 120px;">-->
-                        <h3 class="mb-0"><strong>Chatbot</strong></h3>
-                      </div>
-                      <div class="row w-100 mx-0">  
-                      <iframe
-                        src="https://daffer-queque-tourist-ai-chatbot.hf.space"
-                        style="width:100%;height:400px;border:none;"
-                        loading="lazy">
-                      </iframe>                      
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              <!--</div>-->
-            </div>
-          </div>
         </div><!--close container-->
     </section>
   </main>
