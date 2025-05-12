@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>TouristAI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!-- Favicons -->
+  <!-- Favicons -->
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: TouristAI
+  * Template URL: https://bootstrapmade.com/TouristAI-bootstrap-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <h1 class="sitename">TouristAI</h1>
+    </a>
+
+   <!-- Navigation Menu -->
+    <nav id="navmenu" class="navmenu">
+    <ul class="d-flex justify-content-between w-100">
+        <li><a href="index-ja.html#hero" class="active">ホーム</a></li>
+        <li><a href="index-ja.html#about">私たちについて</a></li>
+        <li><a href="index-ja.html#services">サービス</a></li>
+        <li><a href="index-ja.html#pricing">料金</a></li>
+        <li><a href="index-ja.html#team">チーム</a></li>
+        <li><a href="index-ja.html#contact">お問い合わせ</a></li>
+    </ul>
+    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+
+    <!-- Container for Contact Us and Language Switcher -->
+    <div class="header-right d-flex align-items-center">
+      <a class="btn-getstarted" href="index-ja.html#contact">お問い合わせ</a>
+      <div class="language-switcher ms-3">
+        <select id="language-select" onchange="switchLanguage()" class="form-select">
+          <option value="index.html">English</option>
+          <option value="index-it.html">Italiano</option>
+          <option value="index-es.html">Español</option>
+          <option value="index-fr.html">Français</option>
+          <option value="index-is.html">Íslenska</option>
+          <option value="index-tr.html">Türkçe</option>
+          <option value="index-ja.html"selected>日本語</option>
+        </select>
+</div>
+
+    </div>
+  </div>
+</header>
+
+
+  <main class="main">
+
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+
+  <div class="container py-5" data-aos="fade-in">
+    <div class="row text-center justify-content-center">
+      <div class="col-lg-10">
+        <h1 class="display-4 fw-bold mb-3">計画不要。もっと体験しよう。</h1>
+        <p class="lead mb-4">旅行の相棒、<strong>TouristAI</strong>にお任せください。パーソナライズされた旅行を提案し、隠れた名所を見つけ、イタリアでの行列をスキップします。</p>
+      </div>
+    </div>
+
+    <!-- Search Form Section -->
+    <div id="search" class="search-section bg-white rounded-4 shadow-lg p-4 mt-4 text-dark">
+      <form>
+        <div class="row gy-4">
+          <div class="col-md-4">
+            <label for="departure" class="form-label fw-semibold">出発都市</label>
+            <select class="form-select form-select-lg" id="departure">
+              <option value="Milano" selected>ミラノ（現在地）</option>
+              <option value="Torino">トリノ</option>
+              <option value="Bologna">ボローニャ</option>
+              <option value="Firenze">フィレンツェ</option>
+              <option value="Roma">ローマ</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="destination" class="form-label fw-semibold">目的地</label>
+            <select class="form-select form-select-lg" id="destination">
+              <option disabled selected>場所を選んでください</option>
+              <option value="Milano">ミラノ</option>
+              <option value="Torino">トリノ</option>
+              <option value="Bologna">ボローニャ</option>
+              <option value="Firenze">フィレンツェ</option>
+              <option value="Roma">ローマ</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="travelers" class="form-label fw-semibold">旅行者人数</label>
+            <select class="form-select form-select-lg" id="travelers">
+              <option value="1">1人</option>
+              <option value="2">2人</option>
+              <option value="3">3人</option>
+              <option value="4">4人</option>
+              <option value="5+">5人以上</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="check-in" class="form-label fw-semibold">チェックイン日</label>
+            <input type="date" class="form-control form-control-lg" id="check-in">
+          </div>
+
+          <div class="col-md-4">
+            <label for="check-out" class="form-label fw-semibold">チェックアウト日</label>
+            <input type="date" class="form-control form-control-lg" id="check-out">
+          </div>
+
+          <div class="col-md-4">
+            <label for="budget" class="form-label fw-semibold">予算</label>
+            <select class="form-select form-select-lg" id="budget">
+              <option value="budget">お手頃</option>
+              <option value="moderate">中程度</option>
+              <option value="luxury">豪華</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="interests" class="form-label fw-semibold">興味・関心</label>
+            <select class="form-select form-select-lg" id="interests">
+              <option value="culture">文化・歴史</option>
+              <option value="adventure">冒険・アウトドア</option>
+              <option value="food">食べ物・料理</option>
+              <option value="relaxation">リラックス・ウェルネス</option>
+              <option value="nightlife">ナイトライフ・エンターテイメント</option>
+            </select>
+          </div>
+
+          <div class="col-md-6 d-flex align-items-end">
+            <button type="button" class="btn btn-primary btn-lg w-100 py-3">旅行プランを作成</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- /Hero Section -->
+
+
+   <!-- About Section -->
+<section id="about" class="about section light-background">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row align-items-xl-center gy-5">
+
+      <div class="col-xl-5 content">
+        <h3>私たちについて</h3>
+        <h2>AIで旅をパーソナライズ — シームレスに、スマートに、本物の体験を</h2>
+        <p>
+          <strong>TouristAI</strong>では、人工知能と実際の旅行体験を組み合わせて、旅を再定義しています。一人旅の冒険家でも、グルメ好きでも、家族旅行でも、当社のプラットフォームはまるであなた専用に作られたような旅行を提案します。リアルタイムの行列情報、現地ガイド、個別の旅程、イベントの即時通知などを通じて、計画は手間なく、体験は忘れられないものにします。
+        </p>
+        <a href="index-ja.html#hero" class="read-more"><span>今すぐ旅の計画を</span><i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="col-xl-7">
+        <div class="row gy-4 icon-boxes">
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon-box">
+              <i class="bi bi-people"></i>
+              <h3>現地ガイド</h3>
+              <p>あなたの言語を話し、文化をよく知る認証済みの現地ガイドや学生とつながることができます。</p>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <i class="bi bi-person-check"></i>
+              <h3>あなただけの体験</h3>
+              <p>あなたの興味、予算、旅行スタイル、現在地に基づいたAIによるおすすめをご提案します。</p>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <i class="bi bi-map"></i>
+              <h3>スマート旅程</h3>
+              <p>必見スポットから地元の隠れた名所まで、当社のアルゴリズムが1日をプランニングします。</p>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box">
+              <i class="bi bi-clock-history"></i>
+              <h3>リアルタイム情報</h3>
+              <p>行列やイベント、遅延、近くの代替スポットなど、今知りたい情報をリアルタイムで通知します。</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- /About Section -->
+
+
+
+   <!-- Services Section -->
+<section id="services" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>サービス</h2>
+    <p>TouristAIは、AIによるおすすめとスムーズな予約で、あなただけの旅行プランを簡単に作成します。</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <!-- Service Item 1: Local Guide Connection -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-person-lines-fill"></i></div>
+          <div>
+            <h4 class="title"><span class="stretched-link">現地ガイドとのつながり</span></h4>
+            <p class="description">現地ガイドとつながり、観光地を超えて、地元の隠れた名所や本場の体験を楽しみましょう。</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item 2: AI-Driven Personalization -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-robot"></i></div>
+          <div>
+            <h4 class="title"><span class="stretched-link">AIによるパーソナライズ</span></h4>
+            <p class="description">あなたの興味、予算、好みに基づいてAIが最適な旅行体験を提案します。</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item 3: Seamless Booking System -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-calendar-check"></i></div>
+          <div>
+            <h4 class="title"><span class="stretched-link">シームレスな予約システム</span></h4>
+            <p class="description">アクティビティ、レストラン、宿泊施設の予約が簡単に。ワンクリックで予約・即時確認。</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item 4: Queue & Alternative Suggestions -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-clock"></i></div>
+          <div>
+            <h4 class="title"><span class="stretched-link">行列回避 & 代替提案</span></h4>
+            <p class="description">AIで行列の混雑を予測し、空いている時間帯や代替スポットをご提案します。</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item 5: Real-Time Event Discovery -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-calendar-event"></i></div>
+          <div>
+            <h4 class="title"><span class="stretched-link">リアルタイムイベント発見</span></h4>
+            <p class="description">ウェブスクレイピングにより、現地の祭りやコンサート、特別イベントをリアルタイムでお知らせ。</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item 6: Rewards & Perks -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-gift"></i></div>
+          <div>
+            <h4 class="title"><span class="stretched-link">報酬 & 特典</span></h4>
+            <p class="description">レビューやフィードバックで報酬をゲット！次回の旅行で割引や優先予約などの特典を受けられます。</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Services Section -->
+
+
+    
+  <!-- Pricing Section -->
+<section id="pricing" class="pricing section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>料金プラン</h2>
+    <p>あなたの旅行スタイルに合ったプランを選んで、パーソナライズされたガイド体験を手に入れましょう。</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="zoom-in" data-aos-delay="100">
+
+    <div class="row g-4">
+
+      <!-- Basic Plan -->
+      <div class="col-lg-4">
+        <div class="pricing-item">
+          <h3>ベーシックプラン</h3>
+          <div class="icon">
+            <i class="bi bi-person-check"></i>
+          </div>
+          <h4><sup>€</sup>0<span> / 月</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>一部ガイドへのアクセス</span></li>
+            <li><i class="bi bi-check"></i> <span>人気の旅行スポットを探索</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span>カスタム旅程</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span>リアルタイムイベント情報</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span>制限付きのサポート</span></li>
+          </ul>
+          <div class="text-center"><a href="index-ja.html#contact" class="buy-btn">はじめる</a></div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+      <!-- Premium Plan -->
+      <div class="col-lg-4">
+        <div class="pricing-item featured">
+          <h3>プレミアムプラン</h3>
+          <div class="icon">
+            <i class="bi bi-star"></i>
+          </div>
+
+          <h4><sup>€</sup>4.99<span> / 月</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>無制限のガイドアクセス</span></li>
+            <li><i class="bi bi-check"></i> <span>好みに基づくカスタム旅程</span></li>
+            <li><i class="bi bi-check"></i> <span>リアルタイムイベント情報</span></li>
+            <li><i class="bi bi-check"></i> <span>優先カスタマーサポート</span></li>
+            <li><i class="bi bi-check"></i> <span>限定の現地ガイドにアクセス</span></li>
+          </ul>
+          <div class="text-center"><a href="index-ja.html#contact" class="buy-btn">はじめる</a></div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+      <!-- Enterprise Plan -->
+      <div class="col-lg-4">
+        <div class="pricing-item">
+          <h3>エンタープライズプラン</h3>
+          <div class="icon">
+            <i class="bi bi-building"></i>
+          </div>
+          <h4><sup>€</sup>49<span> / 月</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>企業向けにカスタマイズされた旅程</span></li>
+            <li><i class="bi bi-check"></i> <span>専属トラベルアドバイザー</span></li>
+            <li><i class="bi bi-check"></i> <span>リアルタイムの分析とおすすめ</span></li>
+            <li><i class="bi bi-check"></i> <span>独占的な現地パートナーシップ</span></li>
+            <li><i class="bi bi-check"></i> <span>すべてのプレミアム機能のフルアクセス</span></li>
+          </ul>
+          <div class="text-center"><a href="index-ja.html#contact" class="buy-btn">はじめる</a></div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Pricing Section -->
+
+
+  <!-- Faq Section -->
+<section id="faq" class="faq section">
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="content px-xl-5">
+          <h3><span>よくある </span><strong>質問</strong></h3>
+          <p>プランや機能についてのよくあるご質問に素早くお答えします。</p>
+        </div>
+      </div>
+
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="faq-container">
+          <div class="faq-item faq-active">
+            <h3><span class="num">1.</span> <span>無料、プレミアム、エンタープライズプランの違いは何ですか？</span></h3>
+            <div class="faq-content">
+              <p>無料プランでは、人気の観光地に関する基本的なガイドにアクセスできます。プレミアムプランでは、パーソナライズされた旅程やリアルタイムイベント情報に無制限でアクセス可能です。エンタープライズプランでは、企業や頻繁に旅行する方向けにカスタマイズされた旅程、専属サポート、限定の現地パートナーシップが提供されます。</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
+          <div class="faq-item">
+            <h3><span class="num">2.</span> <span>後からプランをアップグレードできますか？</span></h3>
+            <div class="faq-content">
+              <p>はい、アカウント設定からいつでも簡単にプランをアップグレードできます。アップグレード後は、新しいプランの機能や特典をすぐにご利用いただけます。</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
+          <div class="faq-item">
+            <h3><span class="num">3.</span> <span>各プランではどのようなサポートが受けられますか？</span></h3>
+            <div class="faq-content">
+              <p>無料プランでは、営業時間内の基本的なサポートが利用可能です。プレミアムプランでは、より迅速な対応の優先サポートが、エンタープライズプランでは24時間365日の専用カスタマーサポートが利用できます。</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
+          <div class="faq-item">
+            <h3><span class="num">4.</span> <span>旅程は本当にカスタマイズできますか？</span></h3>
+            <div class="faq-content">
+              <p>はい！プレミアムおよびエンタープライズプランでは、旅程を完全にカスタマイズできます。アクティビティ、目的地、個別の旅行体験など、好みに応じて自由に選択可能です。</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
+          <div class="faq-item">
+            <h3><span class="num">5.</span> <span>リアルタイムイベント情報とはどのようなものですか？</span></h3>
+            <div class="faq-content">
+              <p>AIを活用して、スケジュール変更、天候、地元のイベント情報などをリアルタイムで取得しています。これにより、常に最新の情報をもとに旅行計画を立てられます。</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
+          <div class="faq-item">
+            <h3><span class="num">6.</span> <span>いつでもサブスクリプションを解約できますか？</span></h3>
+            <div class="faq-content">
+              <p>はい、アカウント設定からいつでも解約できます。解約後も現在の請求期間が終了するまでサービスをご利用いただけ、追加料金は発生しません。</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
+          <div class="faq-item">
+            <h3><span class="num">7.</span> <span>特定の旅行先についてサポートを受けることはできますか？</span></h3>
+            <div class="faq-content">
+              <p>プレミアムおよびエンタープライズプランでは、専属のトラベルアドバイザーが旅行計画の支援を行い、目的地に関する質問にお答えし、カスタム体験をご提案します。</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /Faq Section -->
+
+
+   <!-- Team Section -->
+<section id="team" class="team section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>私たちのチーム</h2>
+        <p>次世代の旅行体験を創造する、多国籍のエンジニアチームです。</p>
+  </div>
+
+  <div class="container">
+    <div class="row gy-5">
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+        <div class="member-img">
+          <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="member-info text-center">
+          <h4>Matteo Pavia</h4>
+          <span>最高経営責任者（CEO）</span>
+            <p>イタリア出身 – ロボティクス修士</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+        <div class="member-img">
+          <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="member-info text-center">
+          <h4>Daffer Queque</h4>
+          <span>最高技術責任者（CTO）</span>
+            <p>ペルー出身 – 人工知能博士</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
+        <div class="member-img">
+          <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="member-info text-center">
+          <h4>Kristin Eva</h4>
+          <span>最高マーケティング責任者（CMO）</span>
+            <p>アイスランド出身 – ソフトウェア工学修士</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
+        <div class="member-img">
+          <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="member-info text-center">
+          <h4>Alessandro Mantovani</h4>
+          <span>最高営業責任者（CSO）</span>
+            <p>イタリア出身 – 自動化工学学士</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
+        <div class="member-img">
+          <img src="assets/img/team/team-5.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="member-info text-center">
+          <h4>Helin Geleri</h4>
+         <span>最高製品責任者（CPO）</span>
+            <p>トルコ出身 – 自動化工学修士</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
+        <div class="member-img">
+          <img src="assets/img/team/team-6.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="member-info text-center">
+          <h4>Mateo Gomez</h4>
+          <span>最高財務責任者（CFO）</span>
+            <p>コロンビア出身 – 財務工学修士</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="700">
+        <div class="member-img">
+          <img src="assets/img/team/team-7.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="member-info text-center">
+          <h4>Fabio Ficcadenti</h4>
+          <span>最高開発責任者（CDO）</span>
+            <p>イタリア出身 – データサイエンス修士</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+   <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section light-background">
+
+  <div class="container">
+
+    <div class="row align-items-center">
+
+      <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
+        <h3>初期ユーザーの声</h3>
+        <p>
+          最初のユーザーからのフィードバックは、TouristAIを形作る上で非常に重要でした。旅行者、開発者、地元のサービス提供者がどのような体験をしたのかをご紹介します。
+        </p>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="d-flex">
+                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img flex-shrink-0" alt="">
+                  <div>
+                    <h3>Ana Ribeiro</h3>
+                    <h4>旅行ブロガー、ポルトガル</h4>
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>TouristAIは、自分では絶対に見つけられなかった隠れた名所を発見する手助けをしてくれました。まるでポケットにローカルガイドがいるような感覚でした。</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="d-flex">
+                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img flex-shrink-0" alt="">
+                  <div>
+                    <h3>Daniel Kim</h3>
+                    <h4>スタートアップ創業者、ソウル</h4>
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>GAAS APIと統合して、私たちのアプリでリアルタイムの旅行プランを提供しています。スムーズで速く、スケーラブルでした。</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="d-flex">
+                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img flex-shrink-0" alt="">
+                  <div>
+                    <h3>Marie Chen</h3>
+                    <h4>都市ガイド運営者、バンクーバー</h4>
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>TouristAIのプラットフォームは、私のような地元のサービス提供者が国際的な旅行者に発見される手助けをしてくれます。革命的です！</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Testimonials Section -->
+
+
+   <!-- Contact Section -->
+<section id="contact" class="contact section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>お問い合わせ</h2>
+    <p>TouristAIへのご連絡で、パーソナライズされた旅行アシスタンスと情報を得ましょう</p>
+  </div><!-- End Section Title -->
+
+
+  <div class="responsive-form">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfMyvD1u5DJjxACIkxui8BlZ7xAwbm93mVJPD7hQkZAxZcYMg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">読み込み中…</iframe>
+  </div>
+
+</section><!-- /Contact Section -->
+
+<footer id="footer" class="footer position-relative light-background">
+
+  <div class="container footer-top">
+    <div class="row gy-4">
+    <div class="col-lg-5 col-md-12 footer-about">
+      <a href="index-ja.html" class="logo d-flex align-items-center">
+        <span class="sitename">TouristAI</span>
+        <small class="text-muted ms-2">大学のプロジェクト</small>
+      </a>
+
+      <p class="mt-3">
+        <strong>TouristAI</strong>は、高度なテクノロジー起業家精神とデジタル革新に焦点を当てた学術課程の一環として、国際的な大学生チームによって開発された非商業的なプロジェクトです。
+      </p>
+
+      <p>
+        このウェブサイトは、教育および研究目的のみで使用されることを意図しています。ここに表示される機能、コンテンツ、サービスはプロトタイプであり、商業的な提供を代表するものではありません。旅行予約や有料サービスは提供されていません。
+      </p>
+
+      <p>
+        ここに表示されるすべてのデータは架空のものであるか、学術的なデモンストレーションのためにフェアユースで使用されています。TouristAIは、生成AIがどのようにしてパーソナライズされた旅行体験を向上させるかを探求するための概念実証として機能します。
+      </p>
+    </div>
+
+    <div class="col-lg-2 col-6 footer-links">
+      <h4>役立つリンク</h4>
+      <ul>
+        <li><a href="index-ja.html#hero">ホーム</a></li>
+        <li><a href="index-ja.html#about">私たちについて</a></li>
+        <li><a href="index-ja.html#services">サービス</a></li>
+        <li><a href="index-ja.html#pricing">料金</a></li>
+        <li><a href="index-ja.html#team">チーム</a></li>
+      </ul>
+    </div>
+
+    <div class="col-lg-2 col-6 footer-links">
+      <h4>私たちのサービス</h4>
+      <ul>
+        <li><a href="#">ローカルガイド</a></li>
+        <li><a href="#">パーソナライズされた旅行プラン</a></li>
+        <li><a href="#">AI旅行アシスタント</a></li>
+        <li><a href="#">リアルタイム更新</a></li>
+        <li><a href="#">文化的なおすすめ</a></li>
+      </ul>
+    </div>
+
+    <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+      <h4>免責事項</h4>
+      <p>
+        このプロジェクトは、Politecnico di Milanoの「ハイテク起業家精神」に関するコースのために作成されたもので、学生たちの学術評価のための作品です。外部の旅行代理店や機関とは提携していませんし、承認されていません。
+      </p>
+    </div>
+
+    </div>
+  </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>
+      © 2025 <strong class="sitename">TouristAI</strong> — 教育および研究目的のために大学生によって作成された学術プロジェクト。商業的な権利は含まれていません。
+    </p>
+
+    <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+  </div>
+
+</footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+<!-- Begin TouristAI Content -->
+<!-- The full HTML provided by the user goes here -->
+<!-- For brevity, it is assumed to be pasted here -->
+<!-- End TouristAI Content -->
+
+<script>
+  function switchLanguage() {
+    const selectedLang = document.getElementById("language-select").value;
+    window.location.href = selectedLang;
+  }
+</script>
+
+</body>
+
+</html>
