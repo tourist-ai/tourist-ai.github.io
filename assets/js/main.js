@@ -293,4 +293,23 @@
     });
   });
 
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterSelect = document.getElementById('filter-select');
+    const posts = document.querySelectorAll('.post');
+
+    filterSelect.addEventListener('change', () => {
+      const selected = filterSelect.value;
+
+      posts.forEach(post => {
+        const flags = post.dataset.flags.split(',');
+        if (selected === 'all' || flags.includes(selected)) {
+          post.style.display = 'block';
+        } else {
+          post.style.display = 'none';
+        }
+      });
+    });
+  });  
+
 })();
