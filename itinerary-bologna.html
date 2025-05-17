@@ -109,11 +109,24 @@
                         <strong>Live updates from travelers</strong>
                         <span id="destination-city"></span>
                       </h5>
-                      <p class="card-subtitle text-muted mb-2" style="font-size: 1.25rem; padding: 0px 0;"><strong>Location: 📍 Bologna</strong></p>
+                      <!--p class="card-subtitle text-muted mb-2" style="font-size: 1.25rem; padding: 0px 0;"><strong>Location: 📍 Bologna</strong></p-->
+                      <!-- Dropdown per la selezione dei flag -->
+                      <div class="mb-3">
+                        <label for="filter-select"><strong>📍 Bologna, select Topic:</strong></label>
+                        <select id="filter-select" class="form-select">
+                          <option value="all">⭐️ Show all</option>
+                          <option value="city">🚧 City and Mobility</option>                          
+                          <option value="event">📅 Events</option>                          
+                          <option value="hang_out">😀 Hang out</option>
+                          <!--<option value="train">🚆Trains Mobility</option>-->
+                          <!--<option value="planes">✈️ Planes Mobility</option>-->
+                        </select>
+                      </div>                      
                       <hr class="custom-divider">
+                      
                                       
                       <!-- Post 1 -->
-                      <div class="post">
+                      <div class="post" data-flags="event">
                         <div class="post-header">
                           <!-- Avatar e nome dell'autore -->
                           <div class="post-author">
@@ -127,7 +140,7 @@
                           </div>
                           <span class="post-time">5 minutes ago</span>
                         </div>
-                        <p class="post-content">Only for today, extraordinary exhibition at Palazzo Re Enzo on AI, there will be an expert from California.<br>See you there at 6pm</p>
+                        <p class="post-content">Only for today, extraordinary exhibition at Palazzo Re Enzo on AI, there will be an expert from California. See you there at 6pm</p>
                         <div class="post-footer">
                         
                         <button class="like-combo-button">
@@ -146,12 +159,12 @@
                       </div>
                     
                       <!-- Post 2 -->
-                      <div class="post">
+                      <div class="post" data-flags="city">
                         <div class="post-header">
                           <!-- Avatar e nome dell'autore -->
                           <div class="post-author">
                             <div class="avatar-container">
-                              <img src="assets/img/team/team-2.jpg" alt="Jane Smith" class="avatar">
+                              <img src="assets/img/team/team-4.jpg" alt="Jane Smith" class="avatar">
                             </div>
                             <div>
                               <strong>Jane Smith</strong>
@@ -160,7 +173,7 @@
                           </div>
                           <span class="post-time">30 minutes ago</span>
                         </div>
-                        <p class="post-content">Frustrated, do not take viale Indipendenza today. Is closed for works on the road.</p>
+                        <p class="post-content">Frustrated, another strike of public transportation, and do not take viale Indipendenza today. Is closed for works on the road.</p>
                         <div class="post-footer">
                         <button class="like-combo-button">
                           <span class="like-number">15</span>
@@ -174,7 +187,7 @@
                       </div>
 
                       <!-- Post 3 -->
-                      <div class="post">
+                      <div class="post" data-flags="hang_out">
                         <div class="post-header">
                           <!-- Avatar e nome dell'autore -->
                           <div class="post-author">
@@ -188,7 +201,7 @@
                           </div>
                           <span class="post-time">45 minutes ago</span>
                         </div>
-                        <p class="post-content">I'm at giardini Margherita and everything is fine!</p>
+                        <p class="post-content">We are a group of 6 from Spain in giardini Margherita and everything is fine! Let us now if you want to join us!</p>
                         <div class="post-footer">
                         <button class="like-combo-button">
                           <span class="like-number">20</span>
@@ -199,7 +212,36 @@
                           </button> -->
                           <!-- <button class="btn btn-light btn-sm">Comment</button> -->
                         </div>
-                      </div>           
+                      </div>      
+                      
+                      <!-- Post 4 -->
+                      <div class="post" data-flags="train">
+                        <div class="post-header">
+                          <!-- Avatar e nome dell'autore -->
+                          <div class="post-author">
+                            <div class="avatar-container">
+                              <img src="assets/img/team/team-2.jpg" class="avatar">
+                            </div>
+                            <div>
+                              <strong>Mario Minneman</strong>
+                              <span class="Marco Berghi">Citizen</span>
+                            </div>
+                          </div>
+                          <span class="post-time">45 minutes ago</span>
+                        </div>
+                        <p class="post-content">Look out, a train strike is going on, some trains are canceled</p>
+                        <div class="post-footer">
+                        <button class="like-combo-button">
+                          <span class="like-number">20</span>
+                          <span class="like-text">Like</span>
+                        </button>
+                          <!-- <button class="btn btn-confirm btn-sm">
+                            <span id="confirms-count">4</span> Confirms
+                          </button> -->
+                          <!-- <button class="btn btn-light btn-sm">Comment</button> -->
+                        </div>
+                      </div>     
+
                     </div>
                   </div>
                 </div>
@@ -427,3 +469,5 @@
 
 </body>
 </html>
+
+<script src="js/main.js"></script>
