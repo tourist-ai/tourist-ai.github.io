@@ -2914,6 +2914,7 @@ section,
 .card-body {
     padding: 20px;
     color: #333;
+    max-height: 800px;
 }
 
 .post {
@@ -3215,4 +3216,34 @@ ul.list-unstyled {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+
+/* Target solo l'elemento scrollabile */
+.scrollable-card {
+  overflow-y: auto;
+}
+
+/* Webkit browsers */
+.scrollable-card::-webkit-scrollbar {
+  width: 6px; /* più sottile della default */
+}
+
+.scrollable-card {
+  scrollbar-width: thin;         /* "auto", "thin" o "none" */
+  scrollbar-color: #e3dcdc #f1f1f1; /* thumb color + track color */
+}
+
+.scrollable-card::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Colore sfondo "binario" */
+  border-radius: 10px;
+}
+
+.scrollable-card::-webkit-scrollbar-thumb {
+  background: #888; /* Colore barra vera e propria */
+  border-radius: 10px;
+}
+
+.scrollable-card::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Colore on hover */
 }
