@@ -316,4 +316,13 @@
     });
   });  
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".mobile-nav-toggle");
+    const menu = document.getElementById("navmenu");
+
+    toggle.addEventListener("click", function () {
+      menu.classList.toggle("mobile-visible");
+    });
+  });  
+
 })();
