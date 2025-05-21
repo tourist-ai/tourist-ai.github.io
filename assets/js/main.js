@@ -260,6 +260,10 @@
       redirectUrl = 'itinerary-florence.html';
     } else if (destinationCity === 'Bologna') {
       redirectUrl = 'itinerary-bologna.html';
+    } else if (destinationCity === 'Napoli') {
+      redirectUrl = 'itinerary-turin.html';
+    } else if (destinationCity === 'Venezia') {
+      redirectUrl = 'itinerary-turin.html';
     } else if (destinationCity === 'Torino') {
       redirectUrl = 'itinerary-turin.html';
     } else {
